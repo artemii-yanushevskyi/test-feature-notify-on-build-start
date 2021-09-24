@@ -3,8 +3,4 @@ workflows:
     name: Build
     scripts:
       - echo "Build"
-    publishing:
-      slack:
-        channel: "#test-feature-notify-on-build-start"
-        notify_on_build_start: true
 
