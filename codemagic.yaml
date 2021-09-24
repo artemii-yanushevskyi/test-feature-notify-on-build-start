@@ -8,4 +8,5 @@ workflows:
         - pattern: v*
           include: true
     scripts:
-      - echo attempt 4
+      - echo attempt
+ 4
