@@ -1,6 +1,6 @@
 workflows:
   build:
-    name: Build
+#    name: Build
     triggering:
       events:
         - tag
