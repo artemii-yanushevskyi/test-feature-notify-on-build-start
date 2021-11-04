@@ -1,8 +1,7 @@
 workflows:
-  environment:
-    ndk: r22b
   build:
+    environment:
+      ndk: r22b
     name: Build
     scripts:
       - echo "Build"
-
