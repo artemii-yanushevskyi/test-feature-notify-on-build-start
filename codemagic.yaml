@@ -1,4 +1,6 @@
 workflows:
+  environment:
+    ndk: r22b
   build:
     name: Build
     scripts:
