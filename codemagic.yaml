@@ -1,6 +1,7 @@
 workflows:
   build:
     environment:
+      java: 8
       ndk: r22b
     name: Build
     scripts:
