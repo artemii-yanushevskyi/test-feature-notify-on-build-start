@@ -3,6 +3,7 @@ workflows:
     environment:
       java: 8
       ndk: r22b
+      xcode: 13.2
     name: Build
     scripts:
       - echo "Build"
