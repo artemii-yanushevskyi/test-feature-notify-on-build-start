@@ -1,9 +1,10 @@
 workflows:
   build:
     environment:
-      java: 8
-      ndk: r22b
+      # ndk: r22b
       xcode: 13.2
     name: Build
     scripts:
       - echo "Build"
+      - /usr/local/share/android-sdk/tools/bin/sdkmanager 'ndk;22.1.7171670' > /dev/null
+
