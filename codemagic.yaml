@@ -1,7 +1,7 @@
 workflows:
   build:
     environment:
-      java: 1.8
+      java: 8
       ndk: r22b
       xcode: 13.2
     name: Build
