@@ -1,10 +1,10 @@
 workflows:
   build:
-    environment:
-      java: 8
-      ndk: r22b
-      xcode: 11.7
     name: Build
     scripts:
-      - echo "Build"
+      - name: Run build and return license
+        script:
+          - set +e # no exit on fail
+          - ./build.sh
+          - ./return-license.sh
 
