@@ -3,8 +3,8 @@ workflows:
     name: Build
     scripts:
       - name: Run build and return license
-        script:
-          - set +e # no exit on fail
-          - ./build.sh
-          - ./return-license.sh
+        script: |
+          set +e # no exit on fail
+          ./build.sh
+          ./return-license.sh
 
