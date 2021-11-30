@@ -3,7 +3,7 @@ workflows:
     name: Build
     environment:
       vars:
-        ALLOW_DRAFT_PR: false
+        ALLOW_DRAFT_PR: true
     triggering:
       events:
         - pull_request
