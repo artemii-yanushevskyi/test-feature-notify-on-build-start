@@ -8,7 +8,7 @@ workflows:
       events:
         - pull_request
     when:
-      condition: env.ALLOW_DRAFT_PR == '1' or event.pull_request.draft == false 
+      condition: env.ALLOW_DRAFT_PR == true or event.pull_request.draft == false 
     scripts:
-      - echo "Build I"
+      - echo "Build"
 
