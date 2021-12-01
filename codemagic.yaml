@@ -10,5 +10,5 @@ workflows:
     when:
       condition: env.ALLOW_DRAFT_PR == true or event.pull_request.draft == false 
     scripts:
-      - echo "build"
+      - echo "Build emacs"
 
