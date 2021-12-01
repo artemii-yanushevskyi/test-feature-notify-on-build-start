@@ -13,5 +13,5 @@ workflows:
           - foobar.txt
       condition: env.ALLOW_DRAFT_PR == 'True' or event.pull_request.draft == false
     scripts:
-      - echo "Build vi"
+      - echo "Build emacs"
 
