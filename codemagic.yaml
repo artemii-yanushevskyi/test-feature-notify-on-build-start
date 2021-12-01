@@ -8,7 +8,10 @@ workflows:
       events:
         - pull_request
     when:
-      condition: env.ALLOW_DRAFT_PR == true or event.pull_request.draft == false 
+      changeset:
+        includes:
+          - foobar.txt
+      # condition: env.ALLOW_DRAFT_PR == true or event.pull_request.draft == false 
     scripts:
       - echo "Build"
 
