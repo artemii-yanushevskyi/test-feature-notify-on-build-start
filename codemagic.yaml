@@ -3,7 +3,7 @@ workflows:
     name: Build
     environment:
       vars:
-        ALLOW_DRAFT_PR: true
+        ALLOW_DRAFT_PR: True
     triggering:
       events:
         - pull_request
@@ -11,7 +11,7 @@ workflows:
       changeset:
         includes:
           - foobar.txt
-      # condition: env.ALLOW_DRAFT_PR == 'True' or event.pull_request.draft == false
+      condition: env.ALLOW_DRAFT_PR == 'True' or event.pull_request.draft == false
     scripts:
       - echo "Build vi"
 
