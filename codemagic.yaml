@@ -15,7 +15,7 @@ workflows:
           condition: event.pull_request.draft
       - script: echo "Run FOO is BAR"
         when:
-          condition: env.FOO == 'BAR'
+          condition: baz.env.FOO == 'BAR'
       - script: echo "Run FOO is not BAR"
         when:
           condition: env.FOO != 'BAR'
