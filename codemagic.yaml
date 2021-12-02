@@ -1,18 +1,25 @@
 workflows:
   build:
-    name: Build
+    name: Build for draft pull request
     environment:
       vars:
-        ALLOW_DRAFT_PR: True
+        FOO: BAR
     triggering:
       events:
         - pull_request
     when:
-      changeset:
-        includes:
-          - foobar.txt
-      condition:
-# env.ALLOW_DRAFT_PR == 'True' or event.pull_request.draft == false
+      condition: event.pull_request.draft == false
     scripts:
-      - echo "Build emacs"
+      - script: echo "Run for draft pull request"
+        when:
+          condition: event.pull_request.draft
+      - script: echo "Run FOO is BAR"
+        when:
+          condition: env.FOO == 'BAR'
+      - script: echo "Run FOO is not BAR"
+        when:
+          condition: env.FOO != 'BAR'
+      - script: echo "Run FOO is not BAZ"
+        when:
+          condition: env.FOO != 'BAZ'
 
