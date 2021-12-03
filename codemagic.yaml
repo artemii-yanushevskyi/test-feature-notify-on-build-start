@@ -4,6 +4,11 @@ workflows:
     environment:
       vars:
         FOO: BAR
+        VAR1: True
+        VAR2: true
+        VAR3: yes
+        VAR4: no
+        VAR5: false
     triggering:
       events:
         - pull_request
