@@ -1,6 +1,6 @@
 workflows:
   build:
-    name: Build for draft pull request
+    name: Build for draft pull request (edit)
     environment:
       vars:
         FOO: BAR
