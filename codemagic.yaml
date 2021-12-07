@@ -1,6 +1,7 @@
 workflows:
   build:
-    name: Build for draft pull request (staging ok)
+    name: Build for draft pull request
+    instance_type: linux
     environment:
       vars:
         FOO: BAR
