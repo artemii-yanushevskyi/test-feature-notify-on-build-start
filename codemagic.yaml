@@ -1,6 +1,7 @@
 workflows:
   build:
     name: Build
+    instance_type: linux
     environment:
       vars:
         ALLOW_DRAFT_PR: true
