@@ -8,7 +8,7 @@ workflows:
       events:
         - pull_request
     when:
-      condition: event.pull_request.draft == true
+      condition: event.pull_request.draft == false
     scripts:
       - script: echo "Run for draft pull request"
         when:
