@@ -1,6 +1,6 @@
 workflows:
   build:
-    name: Build for draft pull request (staging json)
+    name: Build for draft pull request (staging ok)
     environment:
       vars:
         FOO: BAR
@@ -15,11 +15,14 @@ workflows:
           condition: event.pull_request.draft
       - script: echo "Run FOO is BAR"
         when:
-          condition: baz.env.FOO == 'BAR'
+          condition: env.FOO == 'BAR'
       - script: echo "Run FOO is not BAR"
         when:
           condition: env.FOO != 'BAR'
       - script: echo "Run FOO is not BAZ"
         when:
           condition: env.FOO != 'BAZ'
-
+      - echo 'Unconditional 1'
+      - script: echo 'Unconditional 2'
+        when:
+      - script: echo 'Unconditional 3'
