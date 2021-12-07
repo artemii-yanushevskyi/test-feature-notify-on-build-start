@@ -25,4 +25,7 @@ workflows:
       - echo 'Unconditional 1'
       - script: echo 'Unconditional 2'
         when:
+          changeset:
+            includes:
+              - codemagic.yaml
       - script: echo 'Unconditional 3'
