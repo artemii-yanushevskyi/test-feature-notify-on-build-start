@@ -1,7 +1,7 @@
 workflows:
   build:
     name: Build for draft pull request wh
-    instance_type: linux
+    instance_type: mac_mini
     environment:
       vars:
         FOO: BAR
