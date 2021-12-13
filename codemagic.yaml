@@ -1,7 +1,7 @@
 workflows:
   build:
     name: Build for draft pull request
-    instance_type: linux_x2
+    instance_type: windows_x2
     environment:
       vars:
         FOO: BAR
