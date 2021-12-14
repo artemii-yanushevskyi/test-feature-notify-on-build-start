@@ -1,6 +1,6 @@
 workflows:
   build:
-    name: Build for draft pull request (green)
+    name: Build for draft pull request (prod)
     instance_type: mac_mini
     environment:
       vars:
