@@ -1,7 +1,7 @@
 workflows:
   build:
     name: Build
-    instance_type: linux
+    instance_type: mac_mint
     environment:
       vars:
         ALLOW_DRAFT_PR: true
