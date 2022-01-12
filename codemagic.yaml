@@ -10,5 +10,5 @@ workflows:
         - pull_request
         - tag
     scripts:
-      - echo "Build C"
+      - echo "Build CM"
 
