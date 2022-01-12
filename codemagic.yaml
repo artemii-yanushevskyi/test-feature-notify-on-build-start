@@ -6,7 +6,9 @@ workflows:
         ALLOW_DRAFT_PR: true
     triggering:
       events:
+        - push
         - pull_request
+        - tag
     scripts:
       - echo "Build vi"
 
