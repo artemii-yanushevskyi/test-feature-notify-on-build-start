@@ -7,10 +7,10 @@ workflows:
     triggering:
       events:
         - pull_request
-    when:
-      changeset:
-        includes:
-          - foobar.txt
+#     when:
+#       changeset:
+#         includes:
+#           - foobar.txt
       # condition: env.ALLOW_DRAFT_PR == 'True' or event.pull_request.draft == false
     scripts:
       - echo "Build vi"
