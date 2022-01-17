@@ -2,7 +2,8 @@ workflows:
   build:
     name: Build
     triggering:
-        - tag
+        events:
+          - tag
     scripts:
       - echo "Build vi"
 
