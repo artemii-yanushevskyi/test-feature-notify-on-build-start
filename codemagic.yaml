@@ -1,6 +1,8 @@
 workflows:
   build:
     name: Build
+    triggering:
+        - tag
     scripts:
       - echo "Build vi"
 
