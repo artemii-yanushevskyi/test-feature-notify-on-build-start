@@ -1,7 +1,7 @@
 workflows:
   lint:
     name: Lint
-    instance_type: mac_pro
+    instance_type: linux
     scripts:
       - ktlint
 
