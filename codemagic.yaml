@@ -1,11 +1,7 @@
 workflows:
   build:
-#    name: Build
     triggering:
       events:
         - tag
-      tag_patterns:
-        - pattern: v*
-          include: true
     scripts:
       - echo Build
