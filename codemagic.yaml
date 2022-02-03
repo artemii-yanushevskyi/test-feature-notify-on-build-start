@@ -4,4 +4,4 @@ workflows:
       events:
         - tag
     scripts:
-      - echo Build€
+      - echo Build€abc
