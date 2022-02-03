@@ -3,5 +3,5 @@ workflows:
     triggering:
       events:
         - tag
-    scripts:
-      - echo Build€abc
+    scripts€:
+      - echo 'Build€'
