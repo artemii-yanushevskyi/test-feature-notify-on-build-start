@@ -1,7 +1,8 @@
 workflows:
   build:
     name: Unity
-    instance_type: linux
+    instance_type: linux_test
     scripts:
       - $UNITY_HOME/Unity -batchmode -version
+      - sleep 60
 
