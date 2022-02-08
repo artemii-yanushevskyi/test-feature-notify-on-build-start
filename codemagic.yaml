@@ -11,6 +11,7 @@ workflows:
     when:
       condition: event.pull_request.draft == true
     scripts:
+      - $UNITY_HOME/Unity -batchmode -version
       - script: echo "Run for draft pull request"
         when:
           condition: event.pull_request.draft
