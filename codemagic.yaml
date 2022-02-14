@@ -1,26 +1,11 @@
 workflows:
   build:
-    name: Build for draft pull request
+    name: Node.js and npm
     instance_type: windows_x2
     environment:
-      vars:
-        FOO: BAR
-    triggering:
-      events:
-        - pull_request
-    when:
-      condition: event.pull_request.draft == true
+      node: 16.14.0
+      npm: 8.3.1
     scripts:
-      - script: echo "Run for draft pull request"
-        when:
-          condition: event.pull_request.draft
-      - script: echo "Run FOO is BAR"
-        when:
-          condition: baz.env.FOO == 'BAR'
-      - script: echo "Run FOO is not BAR"
-        when:
-          condition: env.FOO != 'BAR'
-      - script: echo "Run FOO is not BAZ"
-        when:
-          condition: env.FOO != 'BAZ'
+      - node --version
+      - npm --version
 
