@@ -6,6 +6,8 @@ workflows:
       node: 16.14.0
       npm: 8.3.1
     scripts:
-      - node --version
-      - npm --version
+      - node -v
+      - npm -v
+      - npm install -g yarn
+      - yarn -v
 
