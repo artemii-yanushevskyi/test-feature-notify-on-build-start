@@ -1,17 +1,13 @@
 workflows:
   build:
-    name: Build
+    name: Node.js and npm
+    instance_type: windows_x2
     environment:
-      vars:
-        ALLOW_DRAFT_PR: true
-    triggering:
-      events:
-        - pull_request
-#     when:
-#       changeset:
-#         includes:
-#           - foobar.txt
-      # condition: env.ALLOW_DRAFT_PR == 'True' or event.pull_request.draft == false
+      node: 12
+      npm: 7
     scripts:
-      - echo "Build vi"
+      - node -v
+      - npm -v
+      - npm install -g yarn
+      - yarn -v
 
