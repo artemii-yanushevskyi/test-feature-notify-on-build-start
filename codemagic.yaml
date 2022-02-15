@@ -1,7 +1,6 @@
 workflows:
   build:
     name: Node.js and npm
-    instance_type: windows_x2
     environment:
       node: 12
       npm: 7
