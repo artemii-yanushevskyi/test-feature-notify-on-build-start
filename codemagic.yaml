@@ -4,6 +4,7 @@ workflows:
     environment:
       node: 12
       npm: 7
+      instance_type: mac_mini_m1
     scripts:
       - node -v
       - npm -v
