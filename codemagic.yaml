@@ -1,13 +1,6 @@
 workflows:
-  build:
-    name: Node.js and npm
-    environment:
-      node: 12
-      npm: 7
-      instance_type: mac_mini_m1
+  system-information:
+    name: System Information
     scripts:
-      - node -v
-      - npm -v
-      - npm install -g yarn
-      - yarn -v
-
+      - system_profiler SPHardwareDataType
+    instance_type: mac_mini_m1
