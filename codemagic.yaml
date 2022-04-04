@@ -3,4 +3,6 @@ workflows:
     name: System Information
     scripts:
       - system_profiler SPHardwareDataType
+    environment:
+      xcode: 13.3
     instance_type: mac_mini_m1
