@@ -1,12 +1,6 @@
 workflows:
-  build:
-    name: Node.js and npm
-    environment:
-      node: 12
-      npm: 7
+  empty:
+    name: Empty
     scripts:
-      - node -v
-      - npm -v
-      - npm install -g yarn
-      - yarn -v
+      echo empty
 
