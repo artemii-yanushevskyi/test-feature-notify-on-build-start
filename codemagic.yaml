@@ -1,7 +1,0 @@
-workflows:
-  build:
-    triggering:
-      events:
-        - tag
-    scripts:
-      - echo Build
