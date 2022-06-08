@@ -1,17 +1,8 @@
 workflows:
-  publishing-test:
-    instance_type: mac_pro
-    max_build_duration: 5
+  bucket-publishing:
+    instance_type: mac_mini_m1
     scripts:
-      - |
-        #!/usr/bin/env python3
-        import os
-        with open(os.path.expanduser('~/.netrc'), 'wb') as fd:
-            fd.write(
-                b'machine something.example.com '
-                b'login ester.tester '
-                b'password ^123\xef\xbf\xbd456\n\n'
-            )
       - wget https://api.codemagic.io/artifacts/7fe7c633-55c1-45f7-b7e5-39b2265f5cc9/ee71d440-4eae-40b7-a1a4-0a7254549617/app-debug.apk -O /tmp/android.apk
     artifacts:
       - /tmp/android.apk
+
