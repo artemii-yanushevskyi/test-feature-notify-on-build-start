@@ -1,6 +1,11 @@
 workflows:
   build:
     name: Build
+    triggering:
+        events:
+            - pull_request
+        branch_patterns:
+            - pattern: 'xxx'
     scripts:
       - echo Build
 
