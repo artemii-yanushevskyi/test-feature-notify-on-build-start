@@ -4,8 +4,6 @@ workflows:
     triggering:
         events:
             - pull_request
-        branch_patterns:
-            - pattern: 'foobar'
     scripts:
       - echo Build
 
