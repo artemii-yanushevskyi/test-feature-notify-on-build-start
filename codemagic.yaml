@@ -1,9 +1,6 @@
 workflows:
   build:
     name: Build
-    triggering:
-      events:
-        - pull_request
     scripts:
       - echo "Build ;)"
 
