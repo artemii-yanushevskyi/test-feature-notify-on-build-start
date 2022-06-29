@@ -5,7 +5,7 @@ workflows:
         events:
             - pull_request
         branch_patterns:
-            - pattern: 'xxx'
+            - pattern: 'foobar'
     scripts:
       - echo Build
 
