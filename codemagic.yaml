@@ -2,5 +2,5 @@ workflows:
   build:
     name: Build
     scripts:
-      - echo "Build"
+      - echo "Build PR"
 
