@@ -7,5 +7,5 @@ workflows:
         branch_patterns:
             - pattern: 'foobar'
     scripts:
-      - echo Build
+      - echo Build\ PR
 
