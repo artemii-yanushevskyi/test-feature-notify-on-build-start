@@ -11,4 +11,6 @@ workflows:
         - tag
     scripts:
       - echo "Build CM"
+      - name: Build
+        script: echo "Build"
 
