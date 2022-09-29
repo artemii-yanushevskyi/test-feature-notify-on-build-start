@@ -13,4 +13,5 @@ workflows:
       - echo "Build CM"
       - name: Build
         script: echo "Build"
+      - echo "Finished"
 
