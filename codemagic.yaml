@@ -1,4 +1,5 @@
 workflows:
+  instance_type: windows
   empty:
     name: Empty
     scripts:
