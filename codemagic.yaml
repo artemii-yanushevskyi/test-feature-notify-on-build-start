@@ -1,7 +1,6 @@
 workflows:
   empty:
     name: Empty
-    instance_type: linux
     scripts:
       - echo empty
 
