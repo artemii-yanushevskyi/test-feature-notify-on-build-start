@@ -1,7 +1,7 @@
 workflows:
-  instance_type: windows
   empty:
     name: Empty
+    instance_type: windows_x2
     scripts:
       - echo empty
 
