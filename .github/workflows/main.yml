@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Trigger Codemagic build on Push
         id: build
-        uses: artemii-yanushevskyi/codemagic-build@v1.0.4
+        uses: artemii-yanushevskyi/codemagic-build@v1.0.5
         with:
           app-id: 6107a6c1f16addeb3d113a32
           workflow-id: empty
