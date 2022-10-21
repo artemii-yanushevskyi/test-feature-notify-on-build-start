@@ -5,5 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Codemagic build on Push
-        uses: artemii-yanushevskyi/codemagic-build@v1.0.0
+        id: build
+        uses: artemii-yanushevskyi/codemagic-build@v1.0.1
+        with:
+          app-id: 6107a6c1f16addeb3d113a32
+          workflow-id: empty
+      - name: Build started
+        run: echo "Build ${{ steps.build.outputs.build-id }} started"
 
