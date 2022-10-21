@@ -1,0 +1,9 @@
+on: push
+
+jobs:
+  trigger-codemagic-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Codemagic build on Push
+        uses: artemii-yanushevskyi/codemagic-build@v1.0.0
+
