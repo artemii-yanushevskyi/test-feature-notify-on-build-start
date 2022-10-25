@@ -4,12 +4,16 @@ jobs:
   trigger-codemagic-build:
     runs-on: ubuntu-latest
     steps:
-      - name: Environment
-        run: echo "console.log(process.env)" | node -
       - name: Trigger Codemagic build on Push
+        id: build
         uses: codemagic-ci-cd/trigger-codemagic-workflow-action@v1.0.0-pre-3
         with:
           app-id: 6107a6c1f16addeb3d113a32
           workflow-id: empty
           token: ${{ secrets.CODEMAGIC_API_TOKEN }}
+      - name: Get build information
+        run: |
+          curl ${{ steps.build.outputs.build-api-url }} \
+            -H 'Content-Type: application/json' \
+            -H 'X-Auth-Token: ${{ secrets.CODEMAGIC_API_TOKEN }}'
 
