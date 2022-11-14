@@ -1,6 +1,9 @@
 workflows:
-  empty:
-    name: Empty
+  build:
+    name: Build
+    triggering:
+        events:
+            - pull_request
     scripts:
-      - echo empty
-
+      - name: Build
+        script: echo "Build"
