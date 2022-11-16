@@ -1,6 +1,9 @@
 workflows:
-  empty:
+  environment:
+    environment:
+      vars:
+        XCODE_WORKSPACE: $CM_BUILD_DIR/foobar
     name: Empty
     scripts:
-      - echo empty
+      - echo $XCODE_WORKSPACE
 
