@@ -30,3 +30,4 @@ workflows:
             includes:
               - codemagic.yaml
       - script: echo 'Unconditional 3'
+      - script: echo 'Unconditional 4'
