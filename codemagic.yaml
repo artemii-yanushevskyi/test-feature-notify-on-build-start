@@ -1,12 +1,9 @@
 workflows:
   build:
     name: Build
-    environment:
-      vars:
-        UNAVAILABLE: $FOO
     triggering:
         events:
             - pull_request
     scripts:
       - echo PR Build
-
+    mistake: true
