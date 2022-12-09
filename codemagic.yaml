@@ -3,5 +3,5 @@ workflows:
     name: Build
     max_build_duration: 1
     scripts:
-      - echo "Build"
+      - sleep 1
 
