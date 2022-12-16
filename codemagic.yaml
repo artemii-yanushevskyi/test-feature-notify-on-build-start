@@ -8,7 +8,4 @@ workflows:
     scripts:
       - name: Build
         script: echo "Build"
-      - echo "Finish"
-    scripts:
-      - sleep 0
 
