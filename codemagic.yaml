@@ -6,5 +6,5 @@ workflows:
         events:
             - pull_request
     scripts:
-      - echo "Build"
+      - echo
 
