@@ -6,6 +6,5 @@ workflows:
         events:
             - pull_request
     scripts:
-      - name: Build
-        script: echo "Build"
+      - echo "Build"
 
