@@ -2,6 +2,8 @@ workflows:
   empty:
     name: Empty
     triggering:
+      events:
+        - push
       branch_patterns:
         - pattern: "*"
     scripts:
