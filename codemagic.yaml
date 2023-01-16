@@ -1,6 +1,8 @@
 workflows:
   empty:
     name: Empty
+    triggering:
+      branch_patterns:
+        - pattern: "*"
     scripts:
-      - echo empty change
-
+      - echo all branches
