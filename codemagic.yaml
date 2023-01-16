@@ -8,6 +8,9 @@ workflows:
     triggering:
       events:
         - pull_request
+      branch_patterns:
+        - pattern: "draft-*"
+          source: true
     when:
       condition: event.pull_request.draft == true
     scripts:
