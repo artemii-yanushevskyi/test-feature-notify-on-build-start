@@ -5,6 +5,6 @@ workflows:
       events:
         - push
       branch_patterns:
-        - pattern: "*"
+        - pattern: "master"
     scripts:
       - echo all branches
