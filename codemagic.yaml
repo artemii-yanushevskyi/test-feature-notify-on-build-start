@@ -1,10 +1,5 @@
 workflows:
   empty:
     name: Empty
-    triggering:
-      events:
-        - push
-      branch_patterns:
-        - pattern: "*-dev"
     scripts:
-      - echo all branches
+      - echo
