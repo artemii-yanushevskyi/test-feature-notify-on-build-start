@@ -1,6 +1,8 @@
 workflows:
   empty:
     name: Empty
+    environment:
+      xcode: 12.3
     triggering:
       events:
         - tag
