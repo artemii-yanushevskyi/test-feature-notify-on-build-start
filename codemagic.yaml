@@ -2,6 +2,8 @@ workflows:
   empty:
     name: Empty
     environment:
+      vars:
+        $MY_VAR: foo
       xcode: 12.3
     triggering:
       events:
