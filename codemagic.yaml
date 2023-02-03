@@ -1,13 +1,8 @@
 workflows:
-  empty:
-    name: Empty
+  node:
+    name: Node
     environment:
-      xcode: 12.5
-    triggering:
-      events:
-        - tag
-      tag_patterns:
-        - pattern: "v+([0-9]).+([0-9]).+([0-9])"
+      xcode: 13.3
     scripts:
-      - echo tag build
+      - n 14
 
