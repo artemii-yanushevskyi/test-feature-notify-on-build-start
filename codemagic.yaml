@@ -1,9 +1,13 @@
 workflows:
   build:
     name: Tag build
+    environment:
+      vars:
+        CM_CLONE_DEPTH: 42
     triggering:
       events:
         - tag
         - push
     scripts:
       - echo "Tag build"
+
