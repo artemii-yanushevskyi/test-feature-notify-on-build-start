@@ -4,5 +4,6 @@ workflows:
     triggering:
       events:
         - tag
+        - push
     scripts:
       - echo "Tag build"
