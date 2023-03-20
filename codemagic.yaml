@@ -7,5 +7,5 @@ workflows:
       events:
         - pull_request
     scripts:
-      - echo "Check if merges for PR (with depth 1 on staging)"
+      - echo "Check if merges for PR (with depth 1 on staging!)"
 
