@@ -2,8 +2,7 @@ workflows:
   build:
     name: Tag build
     triggering:
-      - tag
+      events:
+        - tag
     scripts:
       - echo "Tag build"
-
-
