@@ -1,8 +1,9 @@
 workflows:
-  node:
-    name: Node
-    environment:
-      xcode: 13.3
+  build:
+    name: Tag build
+    triggering:
+      - tag
     scripts:
-      - n 14
+      - echo "Tag build"
+
 
