@@ -1,5 +1,6 @@
 workflows:
   build:
+    instance_type: linux
     name: Tag build
     environment:
       vars:
