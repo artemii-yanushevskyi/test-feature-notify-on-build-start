@@ -7,5 +7,5 @@ workflows:
       events:
         - pull_request
     scripts:
-      - echo "Check if merges PR"
+      - echo "Merge PR"
 
