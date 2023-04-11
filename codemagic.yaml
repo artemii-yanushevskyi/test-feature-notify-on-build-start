@@ -1,14 +1,9 @@
 workflows:
   build:
-    instance_type: linux
-    name: Tag build
+    name: Xcode version
+    instance_type: mac_mini
     environment:
-      vars:
-        CM_CLONE_DEPTH: 42
-    triggering:
-      events:
-        - tag
-        - push
+      xcode: edge
     scripts:
-      - echo "Tag build"
+      - echo edge
 
