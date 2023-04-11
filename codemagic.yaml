@@ -1,9 +1,9 @@
 workflows:
   build:
     name: Xcode version
-    instance_type: mac_pro
+    instance_type: mac_mini
     environment:
-      xcode: 14.3
+      xcode: 14.2
     scripts:
       - echo edge
 
