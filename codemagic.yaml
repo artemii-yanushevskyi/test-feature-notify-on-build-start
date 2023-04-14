@@ -3,10 +3,13 @@ workflows:
     name: Secrets
     instance_type: mac_mini_m1
     environment:
+      vars:
+        ENCRYPTED_SUPER_SECRET: Encrypted(Z0FBQUFBQmtPUXNtQVlpdTJvd25TbV9hdm1namNKUHpuMUZIMVRPRWxkRFZqY1NGRmI2TzRfZTZCUGFwU1BOLVB2cVRzZEV0WVVmZThBbUtNZDBGdGprRGZBaTF4ZEJMelFXS1N1M1Jucy04U2E1OURucEFzMGs9)
       groups: 
         - app-super-secret
         - team-super-secret
     scripts:
       - echo "It's my app super secret $APP_SUPER_SECRET"
       - echo "It's my team super secret $TEAM_SUPER_SECRET"
+      - echo "It's my encrypted super secret $ENCRYPTED_SUPER_SECRET"
 
