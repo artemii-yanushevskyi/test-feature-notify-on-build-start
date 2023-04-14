@@ -1,9 +1,7 @@
 workflows:
   build:
-    name: Xcode version
-    instance_type: mac_mini
-    environment:
-      xcode: 14.2
+    name: Secret
+    instance_type: mac_mini_m1
     scripts:
-      - echo edge
+      - echo "It's my $SUPER_SECRET"
 
