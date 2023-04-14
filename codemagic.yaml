@@ -1,9 +1,12 @@
 workflows:
   build:
-    name: Secret
+    name: Secrets
     instance_type: mac_mini_m1
     environment:
-      groups: ['app-super-secret']
+      groups: 
+        - app-super-secret
+        - team-super-secret
     scripts:
-      - echo "It's my $SUPER_SECRET"
+      - echo "It's my app super secret $APP_SUPER_SECRET"
+      - echo "It's my team super secret $TEAM_SUPER_SECRET"
 
