@@ -3,7 +3,7 @@ workflows:
     name: Secret
     instance_type: mac_mini_m1
     environment:
-      groups: ['super-secret-group']
+      groups: ['app-super-secret']
     scripts:
       - echo "It's my $SUPER_SECRET"
 
