@@ -3,7 +3,7 @@ workflows:
     name: Google Play
     environment:
       groups: 
-        - google-play
+        - google_play
     scripts:
       - echo "Google Play publishing"
     publishing:
