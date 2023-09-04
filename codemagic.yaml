@@ -1,5 +1,6 @@
 workflows:
-  name: Empty
-  max_build_duration: 666
-  scripts:
-    - echo Hello
+  empty:
+    name: Empty
+    max_build_duration: 666
+    scripts:
+      - echo Hello
