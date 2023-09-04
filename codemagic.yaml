@@ -1,9 +1,5 @@
 workflows:
-  environment:
-    environment:
-      vars:
-        XCODE_WORKSPACE: $CM_BUILD_DIR/foobar
-    name: Empty
-    scripts:
-      - echo $XCODE_WORKSPACE
-
+  name: Empty
+  max_build_duration: 666
+  scripts:
+    - echo Hello
