@@ -4,6 +4,7 @@ workflows:
     instance_type: mac_pro
     environment:
       unity: 2020.3.41f1
+      xcode: 14
     scripts:
       - ls /Applications/Unity/Hub/Editor/
         
