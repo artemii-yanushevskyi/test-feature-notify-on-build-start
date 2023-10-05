@@ -1,13 +1,9 @@
 workflows:
-  build:
-    name: Google Play
+  unity:
+    name: Unity
+    instance_type: mac_pro
     environment:
-      groups: 
-        - google_play
+      unity: 2020.3.41f1
     scripts:
-      - echo "Google Play publishing"
-    publishing:
-      google_play:
-        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
-        track: internal
-
+      - ls /Applications/Unity/Hub/Editor/
+        
