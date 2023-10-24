@@ -1,7 +1,6 @@
 workflows:
-  build:
-    name: Unity
+  disk_size:
+    name: Disk size
+    instance_type: linux_test
     scripts:
-      - $UNITY_HOME/Unity -batchmode -version
-      - sleep 60
-
+      - df -h .
