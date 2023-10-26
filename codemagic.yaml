@@ -1,6 +1,7 @@
 workflows:
   disk_size:
     name: Disk size
-    instance_type: linux_test
+    instance_type: linux
     scripts:
       - df -h .
+      - sleep 1
