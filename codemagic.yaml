@@ -1,13 +1,8 @@
 workflows:
-  build:
-    name: Google Play
+  xcode:
+    name: Xcode 15.0.1
+    instance_type: mac_mini_m1
     environment:
-      groups: 
-        - google_play
+      xcode: 15.0.1
     scripts:
-      - echo "Google Play publishing"
-    publishing:
-      google_play:
-        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
-        track: internal
-
+      - echo "Xcode 15.0.1"
