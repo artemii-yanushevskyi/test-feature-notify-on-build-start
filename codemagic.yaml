@@ -12,7 +12,7 @@ workflows:
         - pattern: "draft-*"
           source: true
     when:
-      condition: event.pull_request.draft == true
+      condition: event.pull_request | length == 1
     scripts:
       - script: echo "Run for draft pull request"
         when:
