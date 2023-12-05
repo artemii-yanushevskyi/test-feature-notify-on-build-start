@@ -1,13 +1,36 @@
 workflows:
   build:
-    name: Google Play
+    name: Build for draft pull request
+    instance_type: mac_mini_m1
     environment:
-      groups: 
-        - google_play
+      vars:
+        FOO: BAR
+    triggering:
+      events:
+        - pull_request
+      branch_patterns:
+        - pattern: "draft-*"
+          source: true
+    when:
+      condition: event.pull_request | length == 1
     scripts:
-      - echo "Google Play publishing"
-    publishing:
-      google_play:
-        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
-        track: internal
-
+      - script: echo "Run for draft pull request"
+        when:
+          condition: event.pull_request.draft
+      - script: echo "Run FOO is BAR"
+        when:
+          condition: env.FOO == 'BAR'
+      - script: echo "Run FOO is not BAR"
+        when:
+          condition: env.FOO != 'BAR'
+      - script: echo "Run FOO is not BAZ"
+        when:
+          condition: env.FOO != 'BAZ'
+      - echo 'Unconditional 1'
+      - script: echo 'Unconditional 2'
+        when:
+          changeset:
+            includes:
+              - codemagic.yaml
+      - script: echo 'Unconditional 3'
+      - script: echo 'Unconditional 4'
