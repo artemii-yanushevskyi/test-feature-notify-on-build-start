@@ -3,4 +3,4 @@ workflows:
     name: Exit code
     instance_type: mac_mini_m1
     scripts:
-      - return 1 # return non-zero exit code
+      - sh exit-code.sh
