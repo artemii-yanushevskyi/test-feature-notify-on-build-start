@@ -1,13 +1,5 @@
 workflows:
-  build:
-    name: Google Play
-    environment:
-      groups: 
-        - google_play
+  exit-code:
+    name: Exit code
     scripts:
-      - echo "Google Play publishing"
-    publishing:
-      google_play:
-        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
-        track: internal
-
+      - return 1 # return non-zero exit code
