@@ -1,5 +1,6 @@
 workflows:
   exit-code:
     name: Exit code
+    instance_type: linux_x2
     scripts:
       - return 1 # return non-zero exit code
