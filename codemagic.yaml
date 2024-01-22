@@ -1,8 +1,8 @@
 workflows:
   keystores:
     name: Keystores
-      environment:
-        android_signing:
+    environment:
+      android_signing:
           - artemiis-keystore
     scripts:
       - echo "Keystores"
