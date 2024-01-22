@@ -1,13 +1,8 @@
 workflows:
-  build:
-    name: Google Play
-    environment:
-      groups: 
-        - google_play
+  keystores:
+    name: Keystores
+      environment:
+        android_signing:
+          - artemiis-keystore
     scripts:
-      - echo "Google Play publishing"
-    publishing:
-      google_play:
-        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
-        track: internal
-
+      - echo "Keystores"
