@@ -1,7 +1,7 @@
 workflows:
   docker-version:
     name: Docker version
-    instance_type: linux_x2
+    instance_type: linux
     scripts:
       - docker -v
       - docker compose version
