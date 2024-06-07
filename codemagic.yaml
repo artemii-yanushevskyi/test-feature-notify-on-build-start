@@ -4,6 +4,7 @@ workflows:
     environment:
       groups: 
         - google_play
+        - test
     scripts:
       - echo "Google Play publishing"
     publishing:
