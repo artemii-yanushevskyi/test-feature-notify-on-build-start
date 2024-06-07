@@ -1,7 +1,8 @@
 workflows:
-  disk_size:
-    name: Disk size
-    instance_type: linux_test
+  docker-version:
+    name: Docker version
+    instance_type: linux_x2
     scripts:
-      - df -h .
-      - sleep 1
+      - docker -v
+      - docker compose version
+      - docker-compose -v
