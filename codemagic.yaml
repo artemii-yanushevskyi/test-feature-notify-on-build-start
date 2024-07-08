@@ -1,14 +1,12 @@
 workflows:
   build:
-    name: Google Play
-    environment:
-      groups: 
-        - google_play
-        - test
+    name: Triggering requires build inputs with defaults
+    inputs:
+      test_no_default:
+        description: Test no default
+        type: string
+    triggering:
+      events:
+        - push
     scripts:
-      - echo "Google Play publishing"
-    publishing:
-      google_play:
-        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
-        track: internal
-
+      - echo "Triggering requires build inputs with defaults
