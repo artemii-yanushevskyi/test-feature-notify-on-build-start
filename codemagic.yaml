@@ -9,4 +9,4 @@ workflows:
       events:
         - push
     scripts:
-      - echo "Triggering requires build inputs with defaults"
+      - echo "Triggering requires build inputs with defaults!"
