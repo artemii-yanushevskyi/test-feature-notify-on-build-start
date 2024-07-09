@@ -1,6 +1,6 @@
 workflows:
   build:
-    name: Triggering requires build inputs with defaults
+    name: Build
     inputs:
       test_no_default:
         description: Test no default
