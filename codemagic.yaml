@@ -1,14 +1,43 @@
 workflows:
-  build:
-    name: Google Play
+  default-workflow:
+    name: Default Workflow
+    max_build_duration: 60
+    instance_type: mac_mini_m1
     environment:
-      groups: 
-        - google_play
-        - test
+      groups:
+        - app_store_credentials
+      vars:
+        COPYRIGHT: All rights reserved 2022
+        BETA_GROUP: test
+      flutter: 2.2.3
+      xcode: 13.3
+      cocoapods: default
     scripts:
-      - echo "Google Play publishing"
+      - flutter packages pub get
+      - find . -name "Podfile" -execdir pod install \;
+      - keychain initialize
+      - app-store-connect fetch-signing-files --platform IOS --type IOS_APP_STORE --create --strict-match-identifier io.codemagic.capybara
+      - keychain add-certificates
+      - xcode-project use-profiles
+      - flutter build ipa --release --export-options-plist=/Users/builder/export_options.plist
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - flutter_drive.log
     publishing:
-      google_play:
-        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
-        track: internal
-
+      email:
+        recipients:
+          - artemii@nevercode.io
+        notify:
+          success: true
+          failure: true
+      app_store_connect:
+        # api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+        # key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
+        # issuer_id: $APP_STORE_CONNECT_ISSUER_ID
+        submit_to_testflight: true
+        submit_to_app_store: true
+        beta_groups:
+          - Codemagic CLI Tools test
+          - $BETA_GROUP
+        copyright: $COPYRIGHT
