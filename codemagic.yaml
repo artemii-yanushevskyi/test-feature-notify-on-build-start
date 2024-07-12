@@ -1,14 +1,9 @@
 workflows:
-  build:
-    name: Google Play
-    environment:
-      groups: 
-        - google_play
-        - test
+  cache:
+    name: Cache
+    instance_type: mac_mini_m1
+    triggering:
+      events:
+          - push
     scripts:
-      - echo "Google Play publishing"
-    publishing:
-      google_play:
-        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
-        track: internal
-
+      - printenv
