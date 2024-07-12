@@ -4,6 +4,15 @@ workflows:
     instance_type: mac_mini_m1
     triggering:
       events:
-          - push
+        - push
     scripts:
       - printenv
+      - cat binary_blob.sha256
+      - dd if=/dev/urandom of=binary_blob.bin bs=1M count=100
+      - shasum -a 256 binary_blob.bin > binary_blob.sha256
+      - cat binary_blob.sha256
+      - shasum -a 256 -c binary_blob.sha256
+    cache:
+      cache_paths:
+        - $CM_BUILD_DIR/binary_blob.bin
+        - $CM_BUILD_DIR/binary_blob.sha256
