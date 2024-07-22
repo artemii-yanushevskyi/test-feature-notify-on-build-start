@@ -1,14 +1,6 @@
 workflows:
   build:
-    name: Google Play
-    environment:
-      groups: 
-        - google_play
-        - test
+    name: Mac mini M2
+    instance_type: mac_mini_m2
     scripts:
-      - echo "Google Play publishing"
-    publishing:
-      google_play:
-        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
-        track: internal
-
+      - sysctl -n machdep.cpu.brand_string
