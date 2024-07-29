@@ -1,6 +1,16 @@
 workflows:
   build:
-    name: Mac mini M2
-    instance_type: mac_mini_m2
+    name: Placeholder build inputs
+    inputs:
+        site:
+            description: Which website should we deploy?
+            type: choice
+            options:
+                - codemagic
+                - flutterci
+                - reactnativeci
+                - unitycicd
+    labels:
+      - ${{ inputs.site }}
     scripts:
-      - sysctl -n machdep.cpu.brand_string
+      - echo "Placeholder build inputs"
