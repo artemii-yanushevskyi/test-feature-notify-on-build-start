@@ -11,6 +11,6 @@ workflows:
                 - reactnativeci
                 - unitycicd
     labels:
-      - ${{ inputs.site }}
+      - ${{ inputs.wrong }}
     scripts:
       - echo "Placeholder build inputs"
