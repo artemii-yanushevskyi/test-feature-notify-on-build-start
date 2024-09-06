@@ -5,3 +5,4 @@ workflows:
     scripts:
       - sysctl -n machdep.cpu.brand_string
     publishing:
+      scripts:
