@@ -4,3 +4,6 @@ workflows:
     instance_type: mac_mini_m2
     scripts:
       - sysctl -n machdep.cpu.brand_string
+    publishing:
+      scripts:
+        - echo "Publising scripts"
