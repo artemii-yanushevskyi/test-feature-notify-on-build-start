@@ -5,4 +5,5 @@ workflows:
     scripts:
       - sysctl -n machdep.cpu.brand_string
     publishing:
-      scripts:
+      tester_groups:
+        - my-group
