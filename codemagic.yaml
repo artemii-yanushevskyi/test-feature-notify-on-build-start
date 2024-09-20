@@ -1,8 +1,7 @@
 workflows:
-  bucket-publishing:
-    instance_type: mac_mini_m1
+  artifact:
+    name: Produce artifact
     scripts:
-      - wget https://api.codemagic.io/artifacts/7fe7c633-55c1-45f7-b7e5-39b2265f5cc9/ee71d440-4eae-40b7-a1a4-0a7254549617/app-debug.apk -O /tmp/android.apk
+      - echo "Test" > artifact.txt
     artifacts:
-      - /tmp/android.apk
-
+      - /Users/builder/clone/artifact.txt
