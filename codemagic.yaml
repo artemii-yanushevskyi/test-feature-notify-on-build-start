@@ -12,8 +12,12 @@ workflows:
       - name: Logs
         script: |
           counter=1
+          while [ $counter -le 20 ]; do
+              echo "Prepare: $counter/20"
+              ((counter++))
+          done
           while true; do
               echo "Log: $counter"
               ((counter++))
-              sleep 20
+              sleep 10
           done
