@@ -1,6 +1,12 @@
 workflows:
-  build:
-    name: Mac mini M2
-    instance_type: mac_mini_m2
+  logs:
+    name: Logs
     scripts:
-      - sysctl -n machdep.cpu.brand_string
+      - name: Logs
+        script: |
+          counter=1
+          while true; do
+              echo "$counter"
+              ((counter++))
+              sleep 20
+          done
