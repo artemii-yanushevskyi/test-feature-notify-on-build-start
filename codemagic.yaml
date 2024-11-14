@@ -1,6 +1,6 @@
 workflows:
-  linux-test:
-    name: Linux test
-    instance_type: linux_test
+  linux:
+    name: Linux
+    instance_type: linux_x2
     scripts:
       - flutter emulators
