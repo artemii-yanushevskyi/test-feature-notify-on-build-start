@@ -1,8 +1,6 @@
 workflows:
-  docker-version:
-    name: Docker version
-    instance_type: linux_x2
+  linux-test:
+    name: Linux test
+    instance_type: linux_test
     scripts:
-      - docker -v
-      - docker compose version
-      - docker-compose -v
+      - flutter emulators
