@@ -3,10 +3,6 @@ workflows:
     name: Time sync
     instance_type: windows_x2
     scripts:
-      - echo "==> Checking current time synchronization status..."
-      - w32tm /query /status || echo "Failed to query time status. Continuing to resync."
-      - echo "==> Synchronizing system time..."
-      - w32tm /resync || echo "Time synchronization failed. Investigating further required."
-      - echo "==> Verifying updated time synchronization status..."
-      - w32tm /query /status || echo "Verification failed. Please check system configuration."
-
+      - w32tm /query /status
+      - w32tm /resync
+      - w32tm /query /status
