@@ -1,13 +1,7 @@
 workflows:
-  build:
-    name: Node.js and npm
-    instance_type: windows_x2_test
-    environment:
-      node: 12
-      npm: 7
+  time-sync:
+    name: Time sync
+    instance_type: windows_x2
     scripts:
-      - node -v
-      - npm -v
-      - npm install -g yarn
-      - yarn -v
+      - w32tm /resync
 
